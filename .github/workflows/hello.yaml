@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+    - main
+jobs:
+  hello:
+    name: print hello   # job name
+    runs-on: ubuntu-latest # the githgub agent/runner where job steps will run/execute
+    steps:
+      - name: say hello to all
+        run: echo "Hello World!"
