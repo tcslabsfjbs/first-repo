@@ -1,3 +1,4 @@
+name: Hello world pipeline
 on:
   push:
     branches:
