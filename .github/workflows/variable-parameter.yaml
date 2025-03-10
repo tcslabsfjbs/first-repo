@@ -1,4 +1,4 @@
-name: Hello world pipeline
+name: variable and parameter
 on:
   workflow_dispatch:
 env:
