@@ -1,13 +1,13 @@
 name: variable and parameter
 on:
   workflow_dispatch:
-env:
-  NAME: "Manu"
-  TRAINING: "github"
 jobs:
   hello:
     name: greeting   
     runs-on: ubuntu-latest 
+    env:
+      NAME: "Manu"
+      TRAINING: "github"
     steps:
       - name: check out the code
         uses: actions/checkout@v4
@@ -15,6 +15,8 @@ jobs:
         run: echo "Hello $NAME! this is my $TRAINING"
   greeting:
     name: greeting hello  
+    env:
+      NAME: "KRISHNA"
     runs-on: ubuntu-latest 
     steps:
       - name: Greet a user
