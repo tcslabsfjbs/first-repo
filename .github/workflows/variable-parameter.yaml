@@ -1,0 +1,21 @@
+name: Hello world pipeline
+on:
+  workflow_dispatch:
+env:
+  NAME: "Manu"
+  TRAINING: "github"
+jobs:
+  hello:
+    name: greeting   
+    runs-on: ubuntu-latest 
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v4
+      - name: Greet a user
+        run: echo "Hello $NAME! this is my $TRAINING"
+  greeting:
+    name: greeting hello  
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Greet a user
+        run: echo "Hello $NAME! "
