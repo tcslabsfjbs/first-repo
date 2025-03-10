@@ -1,4 +1,4 @@
-name: onpr syntax check
+name: onpr syntax check test
 on:
   workflow_dispatch:
   pull_request:
