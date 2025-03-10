@@ -1,0 +1,15 @@
+name: onpr syntax check
+on:
+  pull_request:
+    types: 
+      - opened 
+      - reopened
+jobs:
+  lint:
+    name: syntaxcheck    # job name
+    runs-on: ubuntu-latest # the githgub agent/runner where job steps will run/execute
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v4
+      - name: syntax check
+        run: echo "syntax is right!"

@@ -1,4 +1,6 @@
+name: Hello world pipeline
 on:
+  workflow_dispatch:
   push:
     branches:
     - main
@@ -7,5 +9,13 @@ jobs:
     name: print hello   # job name
     runs-on: ubuntu-latest # the githgub agent/runner where job steps will run/execute
     steps:
+      - name: check out the code
+        uses: actions/checkout@v4
       - name: say hello to all
         run: echo "Hello World!"
+      - name: this is literal block
+        run: |
+          echo "----- pwd----"
+          pwd
+          echo "----list dir ----"
+          ls -lthr
