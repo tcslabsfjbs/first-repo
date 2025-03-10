@@ -1,8 +1,16 @@
 name: variable and parameter
 on:
   workflow_dispatch:
+    inputs:
+      training:
+        default: "github"
+        type: choice
+        options:
+          - github
+          - bitbucket
+          - gitlab
 env:
-  TRAINING: "github"  # global variable available to all jobs
+  TRAINING: ${{ github.event.input.training }}  # global variable available to all jobs
 jobs:
   hello:
     name: greeting   
