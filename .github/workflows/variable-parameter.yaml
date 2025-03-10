@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest 
     env:
       NAME: "Manu"  # local variable available to this job only 
+      TRAINING: "BITBUCKET"
     steps:
       - name: check out the code
         uses: actions/checkout@v4
