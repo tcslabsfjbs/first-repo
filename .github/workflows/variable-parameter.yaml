@@ -4,13 +4,14 @@ on:
     inputs:
       training:
         default: "github"
+        description: select the training name
         type: choice
         options:
           - github
           - bitbucket
           - gitlab
 env:
-  TRAINING: ${{ input.training }}  # global variable available to all jobs
+  TRAINING: ${{ inputs.training }}  # global variable available to all jobs
 jobs:
   hello:
     name: greeting   
