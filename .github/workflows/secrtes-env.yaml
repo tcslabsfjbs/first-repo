@@ -1,0 +1,16 @@
+name: Secret environment
+on:
+  workflow_dispatch:
+env:
+  PASSWD: ${{ secrets.SECUREPASS }}
+jobs:
+  secret:
+    name: print secret   # job name
+    runs-on: ubuntu-latest # the githgub agent/runner where job steps will run/execute
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v4
+      - name: say hello to all
+        run: echo "Hello $PASSWD" >> file.txt
+      - name: print file
+        run: cat file.txt
