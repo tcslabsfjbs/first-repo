@@ -7,7 +7,7 @@ on:
 jobs:
   hello:
     name: print hello   # job name
-    runs-on: ubuntu-latest # the githgub agent/runner where job steps will run/execute
+    runs-on: arc-runner-set
     steps:
       - name: check out the code
         uses: actions/checkout@v4
